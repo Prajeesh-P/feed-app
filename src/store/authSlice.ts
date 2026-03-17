@@ -15,8 +15,6 @@ const authSlice = createSlice({
     reducers: {
         register: (state, action: PayloadAction<User & { password: string }>) => {
             const { password, ...user } = action.payload;
-            // In a real app, we'd hash the password. 
-            // Here we just check for unique username
             const existing = state.allUsers.find(u => u.username === user.username);
             if (existing) {
                 throw new Error('Username already exists');

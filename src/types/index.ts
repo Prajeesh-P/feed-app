@@ -7,7 +7,7 @@ export interface User {
 export interface AuthState {
     user: User | null;
     isAuthenticated: boolean;
-    allUsers: User[]; // Simulated DB
+    allUsers: User[];
 }
 
 export interface Post {
@@ -15,7 +15,7 @@ export interface Post {
     id: number;
     title: string;
     body: string;
-    username?: string; // Derived
+    username?: string;
     likes: number;
     commentsCount: number;
     isLiked?: boolean;
@@ -27,7 +27,7 @@ export interface Comment {
     name: string;
     email: string;
     body: string;
-    userId?: number; // Simulated
+    userId?: number;
 }
 
 export interface PostsState {

@@ -18,8 +18,6 @@ const CommentItem: React.FC<CommentItemProps> = ({ comment }) => {
     const { user } = useSelector((state: RootState) => state.auth);
     const dispatch = useDispatch();
 
-    // In this simulation, we consider ownership based on userId if it exists, 
-    // or if the name matches (since JSONPlaceholder doesn't have our user IDs)
     const isOwner = user?.id === comment.userId || user?.name === comment.name;
 
     const handleUpdate = () => {

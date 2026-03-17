@@ -7,7 +7,6 @@ const API_URL = 'https://jsonplaceholder.typicode.com/posts';
 
 export const fetchPosts = createAsyncThunk('posts/fetchPosts', async () => {
     const response = await axios.get<Post[]>(API_URL);
-    // Initialize with mock data for likes and comments
     return response.data.map(post => ({
         ...post,
         likes: Math.floor(Math.random() * 50),
