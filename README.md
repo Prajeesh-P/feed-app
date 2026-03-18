@@ -1,73 +1,74 @@
-# React + TypeScript + Vite
+# FeedApp | Modern Social Media Feed
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, glassmorphic social media feed application built with **React**, **Redux Toolkit**, and **Tailwind CSS v4**. This project features real-time interactions, smooth animations, and a polished user experience.
 
-Currently, two official plugins are available:
+🚀 **[Live Demo](https://Prajeesh-P.github.io/feed-app/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **🔐 Secure Authentication**: Simulated user registration and login with persistent session management using Redux, LocalStorage, and browser cookies.
+- **📝 Dynamic Feed**: 
+  - Create, edit, and delete posts.
+  - Interactive Likes and real-time Comment counts.
+  - Simulated data fetching from the JSONPlaceholder API.
+- **🔍 Content Discovery**:
+  - Global search to find posts by title or content.
+  - Sidebar filters to toggle between the global feed and your own posts.
+- **💎 Premium UI/UX**:
+  - **Glassmorphism**: Sleek, transparent UI with backdrop blur effects.
+  - **Animations**: Fluid entry and exit animations powered by `framer-motion`.
+  - **Responsive Design**: Fully optimized for mobile, tablet, and desktop views.
+- **⚡ Modern Tech Stack**: Built with the latest Tailwind CSS v4 and Vite for lightning-fast performance.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Framework**: [React 18](https://reactjs.org/)
+- **State Management**: [Redux Toolkit](https://redux-toolkit.js.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **API Client**: [Axios](https://axios-http.com/)
+- **Form/Auth**: [js-cookie](https://github.com/js-cookie/js-cookie)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+To get a local copy up and running, follow these simple steps:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repo
+   ```bash
+   git clone https://github.com/Prajeesh-P/feed-app.git
+   ```
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+3. Start the development server
+   ```bash
+   npm run dev
+   ```
+
+## 📦 Project Structure
+
+```text
+src/
+├── components/     # UI Components (Navbar, PostCard, Sidebar, etc.)
+├── pages/          # Page Views (Feed, Login, Register)
+├── store/          # Redux Slices & Store Configuration
+├── types/          # TypeScript Interfaces
+└── index.css       # Tailwind v4 Global Styles
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🌐 Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project is configured for automated deployment to **GitHub Pages** via **GitHub Actions**. Every push to the `main` branch triggers a new build and deployment.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+Built with ❤️ by Prajeesh
